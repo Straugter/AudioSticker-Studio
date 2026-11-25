@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "AudioSticker Studio — Stickers con Sonido Reales para WhatsApp Web",
+  "version": "2.0.0",
+  "description": "Envía Stickers con Sonido nativos reales (con ícono 🔊, WebP animado + Ogg/Opus) directamente desde WhatsApp Web conectado a AudioSticker Studio.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*"],
+      "js": ["content-studio.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content-wa-bridge.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["wa-main-sender.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}

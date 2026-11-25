@@ -1,0 +1,12 @@
+{
+  "appId": "com.audiosticker.studio",
+  "appName": "AudioSticker Studio",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#020617",
+    "allowMixedContent": true
+  }
+}
