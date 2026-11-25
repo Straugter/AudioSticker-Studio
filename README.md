@@ -104,7 +104,7 @@ cd android
 ./gradlew assembleDebug
 ```
 
-La APK generada queda en `android/app/build/outputs/apk/debug/app-debug.apk`. También se incluye el flujo automático de compilación en `.github/workflows/build-android-apk.yml`.
+La APK generada queda en `android/app/build/outputs/apk/debug/app-debug.apk`.
 
 ---
 
@@ -121,7 +121,6 @@ La APK generada queda en `android/app/build/outputs/apk/debug/app-debug.apk`. Ta
 │   └── types.ts                   # Tipos y límites del formato WhatsApp
 ├── chrome-extension/              # Extensión Manifest V3 (v2.0)
 ├── android/                       # Proyecto Capacitor 8 + puente Java nativo (MainActivity.java)
-├── .github/workflows/             # Build automático de la APK en GitHub Actions
 ├── index.html & styles.css        # Interfaz responsive offline (sin CDNs)
 ├── server.js                      # Servidor local + portapapeles de archivos en Windows
 └── AudioSticker-Studio.apk        # Compilación Android lista para instalar
